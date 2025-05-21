@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-F">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>青岛威瑞富泰能源有限公司 - AI驱动的未来能源与商品交易</title>
+    <!-- Link to CSS file would be here -->
+    <style>
+        /* Basic CSS for conceptual layout - actual implementation would be more complex */
+        body {
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif; /* Modern sans-serif */
+            margin: 0;
+            background-color: #0a0f18; /* Dark background */
+            color: #e0e0e0; /* Light text */
+            line-height: 1.6;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .hero {
+            /* Imagine a full-screen video or animated graphic background */
+            background: url('placeholder-hero-bg.jpg') no-repeat center center/cover; /* Replace with actual dynamic background */
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            position: relative; /* For pseudo-elements or overlay effects */
+        }
+        .hero::before { /* Overlay for text readability or cool effect */
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            /* Or a subtle animated gradient */
+        }
+        .hero h1 {
+            font-size: 2.8em; /* Large, impactful */
+            color: #00ffff; /* Glowing cyan or similar */
+            margin-bottom: 0.5em;
+            text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; /* Glow effect */
+            position: relative; /* Ensure it's above overlay */
+            z-index: 1;
+        }
+        .hero .tagline {
+            font-size: 1.4em;
+            color: #ffffff;
+            margin-bottom: 1.5em;
+            position: relative;
+            z-index: 1;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #00ffff; /* Accent color */
+            color: #0a0f18; /* Dark text on bright button */
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+        }
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .section.dark { background-color: #101828; } /* Slightly different dark for contrast */
+        .section.light-accent { background-color: #1a2338; }
+
+        .section-title {
+            font-size: 2.2em;
+            color: #00ffff; /* Accent color */
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .section-title::after { /* Underline effect */
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #00ffff; /* Accent color */
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column for mobile */
+            gap: 30px;
+            margin-top: 20px;
+        }
+        @media (min-width: 768px) { /* For tablets and wider */
+            .content-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+        }
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.05); /* Subtle card background */
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid #00ffff; /* Accent border */
+            text-align: left;
+        }
+        .grid-item h3 {
+            color: #00ffff;
+            margin-top: 0;
+        }
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+        .benefits-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .benefits-list li::before {
+            content: '✓ '; /* Checkmark or other cool icon */
+            color: #00ffff; /* Accent color */
+            margin-right: 10px;
+        }
+        .footer {
+            background-color: #000;
+            color: #aaa;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .footer p { margin: 5px 0; }
+        .footer a { color: #00ffff; text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+
+        /* Placeholder for job item styling */
+        .job-item {
+            background-color: rgba(0, 255, 255, 0.05); /* Light accent for job items */
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .job-item h3 {
+            color: #ffffff; /* Brighter for job title */
+            margin-top: 0;
+        }
+        .job-item .details-toggle {
+            color: #00ffff;
+            cursor: pointer;
+            text-decoration: underline;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION: Full screen, dynamic background (video/animation of data streams, AI networks) -->
+    <header class="hero">
+        <!-- Company Logo (optional, or integrated into text design) -->
+        <h1>青岛威瑞富泰能源有限公司</h1>
+        <p class="tagline">AI赋能未来：智能商品投资与全球供应链的革新者</p>
+        <a href="#about-us" class="cta-button">探索我们的世界</a>
+    </header>
+
+    <!-- ABOUT US SECTION -->
+    <section id="about-us" class="section">
+        <h2 class="section-title">关于我们</h2>
+        <div class="container">
+            <p>青岛威瑞富泰能源有限公司，立足青岛，链接全球。我们不仅专注于大宗商品贸易、能源、化工及仓储物流，更将<strong>人工智能（AI）深度融合</strong>，构建前瞻性的智能化商品投资与供应链服务体系，为全球客户提供精准、高效的决策支持与资源整合。</p>
+        </div>
+    </section>
+
+    <!-- CORE BUSINESSES SECTION -->
+    <section id="core-businesses" class="section dark">
+        <h2 class="section-title">核心业务：AI驱动创新</h2>
+        <div class="container content-grid">
+            <div class="grid-item">
+                <!-- Icon (e.g., stylized supply chain graphic) -->
+                <h3>商品供应链</h3>
+                <p>深耕煤炭、硫磺、锰矿、铁矿等领域，构建高效、稳定、智能化的全球供应链。从采购到终端，AI优化每一环节，确保卓越品质与快速响应。</p>
+            </div>
+            <div class="grid-item">
+                <!-- Icon (e.g., stylized graph/investment graphic) -->
+                <h3>商品资源投资</h3>
+                <p>敏锐洞察市场，聚焦矿产与农业。AI辅助勘探、开发与运营，最大化资源价值，推动产业升级，为世界提供优质资源。</p>
+            </div>
+            <div class="grid-item">
+                <!-- Icon (e.g., stylized AI/brain/data graphic) -->
+                <h3>智能化量化交易</h3>
+                <p>依托顶尖AI团队与大数据分析，构建精准量化模型。实时捕捉市场脉搏，实现自动化智能交易，提升效率与回报，驾驭金融市场未来。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US / OUR EDGE (Optional, but good for impact) -->
+    <section id="why-us" class="section light-accent">
+        <h2 class="section-title">我们的优势</h2>
+        <div class="container">
+            <p>凭借独特的战略眼光、卓越运营与AI技术赋能，我们与众多世界500强及上市公司建立稳固合作，业务遍及全球。我们是您值得信赖的合作伙伴，共同塑造行业未来。</p>
+            <!-- Could add a few bullet points with icons: Global Network, AI-Driven Insights, Proven Expertise -->
+        </div>
+    </section>
+
+    <!-- JOIN OUR TEAM / RECRUITMENT SECTION -->
+    <section id="careers" class="section">
+        <h2 class="section-title">加入我们：与AI一同塑造未来</h2>
+        <div class="container">
+            <p style="font-size: 1.2em; margin-bottom: 30px;">我们正在寻找充满激情、才华横溢的你，共同探索AI在能源与商品领域的无限可能！</p>
+
+            <div class="job-item">
+                <h3>量化研究员/交易员</h3>
+                <p><strong>核心职责：</strong>AI策略研发，模型构建与优化，自动化交易。</p>
+                <p><strong>期待您：</strong>硕士及以上（金融工程、计算机、数学），精通Python/R/MATLAB，熟悉交易模型与AI。</p>
+                <!-- <span class="details-toggle">查看详细要求</span> -->
+                <!-- Detailed requirements could be in an expandable section or link to a separate page -->
+            </div>
+
+            <div class="job-item">
+                <h3>NLP自然语言处理工程师</h3>
+                <p><strong>核心职责：</strong>LLM/深度学习算法在投资领域应用，NLP技术与大模型优化。</p>
+                <p><strong>期待您：</strong>硕士及以上（计算机、AI），精通Python，熟悉PyTorch/TensorFlow，有NLP/大模型项目经验。</p>
+                <!-- <span class="details-toggle">查看详细要求</span> -->
+            </div>
+
+            <div class="job-item">
+                <h3>人工智能训练师</h3>
+                <p><strong>核心职责：</strong>数据收集与标注，大模型测试训练与微调，前沿技术跟踪。</p>
+                <p><strong>期待您：</strong>硕士及以上（AI、计算机、数学），熟悉数据工具与机器学习，精通Python/C++。</p>
+                <!-- <span class="details-toggle">查看详细要求</span> -->
+            </div>
+
+            <h3 style="color: #00ffff; margin-top: 40px; margin-bottom: 20px;">丰厚回报，精英待遇：</h3>
+            <ul class="benefits-list">
+                <li><strong>年薪震撼：</strong>硕士首年20-50万，能力决定价值，上不封顶！</li>
+                <li><strong>无忧住宿：</strong>步行10分钟即达，独立舒适空间。</li>
+                <li><strong>全面保障：</strong>六险一金，额外商业险护航。</li>
+                <li><strong>贴心补贴：</strong>交通、餐饮、通讯全覆盖。</li>
+                <li><strong>劳逸结合：</strong>法定假日+超长春节假，国内外旅游，海外深造。</li>
+                <li><strong>理想工时：</strong>8:30-17:30，周末双休，平衡工作与生活。</li>
+            </ul>
+
+            <p style="margin-top: 40px; font-size: 1.1em;">
+                <strong>心动不如行动！</strong><br>
+                将简历投递至：<a href="mailto:hanxiaoxuan@wereen.com" style="color: #00ffff; font-weight:bold;">hanxiaoxuan@wereen.com</a><br>
+                邮件主题：“学校+姓名+岗位”<br><br>
+                联系人：<br>
+                韩女士 15275423180<br>
+                王女士 18663979512
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTACT / FOOTER SECTION -->
+    <footer class="footer">
+        <div class="container">
+            <p><strong>青岛威瑞富泰能源有限公司</strong></p>
+            <p>地址：青岛市市南区香港中路26号远雄国际广场909-911室</p>
+            <p>招聘/咨询电话：<a href="tel:0532-55673088">0532-55673088</a></p>
+            <p>
+                <a href="http://www.wereen.com" target="_blank">公司官网</a> | 关注微信公众号：“威瑞富泰”
+            </p>
+            <p>&copy; 2024 青岛威瑞富泰能源有限公司. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script for potential interactivity (e.g., smooth scroll, job details toggle) -->
+    <script>
+        // Basic smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Example for toggling job details (if implemented)
+        // document.querySelectorAll('.details-toggle').forEach(toggle => {
+        //     toggle.addEventListener('click', function() {
+        //         const details = this.nextElementSibling; // Assuming details are right after
+        //         if (details) {
+        //             details.style.display = details.style.display === 'none' ? 'block' : 'none';
+        //         }
+        //     });
+        // });
+    </script>
+
+</body>
+</html>
